@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_meet_clone_ui/components/meeting_card.dart';
 import 'package:google_meet_clone_ui/components/my_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,7 +22,48 @@ class HomeScreen extends StatelessWidget {
           Icons.videocam_outlined,
           color: Colors.white,
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blue[300],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 10,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Text(
+                'Meetings',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+            const MeetingCard(
+              title: 'Team sync',
+              subtitle: '10:00 am - 10:30 am',
+            ),
+            const MeetingCard(
+              title: 'Client meeting',
+              subtitle: '10:30 am - 12.00 pm',
+            ),
+            Center(
+              child: TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Show more',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
