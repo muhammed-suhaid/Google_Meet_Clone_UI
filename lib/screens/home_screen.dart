@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const HistoryCard()
+              const HistoryCard(),
             ],
           ),
         ),
